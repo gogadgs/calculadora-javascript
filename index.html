@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--tag linguagem do documento em português-->
+<html lang="pt-BR">
+
+<head>
+    <!--tag favicon cabeçalho da página-->
+    <link rel="shortcut icon" href="favicon.png" />
+    <!--icone cabeçalho da pagina--->
+
+    <!--tag tirando caracteres especiais-->
+    <meta charset="UTF-8" />
+    <!--tag compatibilidade de navegadores-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge google-chrome mozilla Opera 11.0" />
+    <!---tag compatibilidade de visualização em documentos  mobiles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tag linkado para resetar padrões de estilo da página em css de navegadores -->
+    <link rel="stylesheet" media="screen" href="reset.css" />
+    <!-- tag linkado estilo da página em css -->
+    <link rel="stylesheet" href="styleCalc.css" />
+    <!-- tag linkado estilo da página em css para -->
+    <link rel="stylesheet" media="screen and (color)" href="mobile.css" />
+    <title>Calculadora JavaScript</title>
+</head>
+
+<header>
+    <menu></menu>
+</header>
+
+
+<body class="conteudo">
+
+    <h1>Calculadora de empréstimos em Javascript</h1>
+    <table class="centralizar">
+        <tr>
+            <th id="fonte">Cotação:</th>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td id="fonte">Valor do emprestimo(R$):</td>
+            <td>
+                <input id="amount" onchange="calculate()" placeholder="digite valor do emprestimo" required />
+            </td>
+            <td rowspan="8" class="linha">
+
+            </td>
+        </tr>
+        <tr>
+            <td>juros mensais(%):</td>
+            <td>
+                <input id="apr" onchange="calculate();" placeholder="digite valor dos juros" required />
+            </td>
+        </tr>
+        <tr>
+            <td>Tempo(meses)</td>
+            <td>
+                <input id="years" onchange="calculate();" placeholder="digite o tempo para pagar o emprestimo" required />
+            </td>
+        </tr>
+        <tr>
+            <th></th>
+            <td><button onclick="calculate();">Calcular</button></td>
+        </tr>
+        <tr>
+            <td>Parcela Mensal:</td>
+            <td>R$<span class="output" id="paymentMonth"></span></td>
+        </tr>
+
+        <tr>
+            <td>Juros Mensal:</td>
+            <td>R$<span class="output" id="payment"></span></td>
+        </tr>
+        <tr>
+            <td>Montante:</td>
+            <td>R$<span class="output" id="total"></span></td>
+        </tr>
+        <tr>
+            <td>Total de Juros:</td>
+            <td>R$<span class="output" id="totalinterest"></span></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td colspan="2">
+                <div id="Lenders"></div>
+            </td>
+        </tr>
+    </table>
+    <div class="alinhar">
+        <h2 id="fonte2" class="linha">
+            saldo de empréstimos, juros mensais e acumulativos
+        </h2>
+    </div>
+    <canvas id="graph"></canvas>
+
+
+    <!--lógica e iteração com o usuário feito em javascript-->
+    <script src="calculate.js"></script>
+</body>
+
+</html>
